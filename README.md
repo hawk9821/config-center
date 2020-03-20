@@ -10,11 +10,11 @@
 ### 使用步骤及样例介绍：
 
 1.  打包安装config-center工程
-
+   
    ```bash
    mvn clean package install 
    ```
-
+   
 2. 样例工程引入jar包
 
    ```xml
