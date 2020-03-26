@@ -31,9 +31,22 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.hawk.spring.spring-cloud</groupId>
             <artifactId>config-center</artifactId>
             <version>0.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/config-center-0.0.1.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -54,6 +67,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
             </plugin>
         </plugins>
     </build>
